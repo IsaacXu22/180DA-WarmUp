@@ -14,7 +14,7 @@ while(True):
 
     # Display the resulting frame
     cv.imshow('frame',gray)
-
+    
     #pretty sure this is the button to close the thing
     if cv.waitKey(1) & 0xFF == ord('q'):
         break
