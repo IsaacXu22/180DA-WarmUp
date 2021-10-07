@@ -13,6 +13,8 @@ x,y,w,h = cv.boundingRect(cnt)
 
 while(True):
     #cv.imshow('Contour', img)
-    cv.rectangle(img,(x,y),(x+w,y+h),(0,255,0),2)
+    cv.moments(cv.rectangle(img,(x,y),(x+w,y+h),(0,255,0),2))
+
+
     if cv.waitKey(1) & 0xFF == ord('q'):
         break
