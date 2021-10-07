@@ -15,8 +15,8 @@ cx = int(M['m10']/M['m00'])
 cy = int(M['m01']/M['m00'])
 
 area = cv.contourArea(cnt)
-
 print('The area is: ' + str(area))
-perimeter = cv.arcLength(cnt, True)
 
+perimeter = cv.arcLength(cnt, True)
 print('The perimeter is: ' + str(perimeter))
+
