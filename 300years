@@ -1,0 +1,6 @@
+demo = "Bruh"
+if demo == "Bruh":
+	print("hehexd")
+else:
+	print("this demo has been modified")
+
