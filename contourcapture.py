@@ -18,6 +18,8 @@ while(True):
     M = cv.moments(cnt)
     
     #pretty sure this is the button to close the thing
+
+    cv.rectangle()
     if cv.waitKey(1) & 0xFF == ord('q'):
         break
 
