@@ -1,18 +1,23 @@
-# Reminder: This is a comment. The first line imports a default library "socket" into Python.
-# You don’t install this. The second line is initialization to add TCP/IP protocol to the endpoint.
 import socket
-serv = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-# Assigns a port for the server that listens to clients connecting to this port.
-serv.bind(('0.0.0.0', 8080))
-serv.listen(5)
+
+s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+host = socket.gethostname()
+#host_ip = socket.gethostbyname(host) #ip of the advice
+host_ip = "169.254.7.163"
+port = 12345
+
+s.bind((host_ip, port))
+
+s.listen(5)
 while True:
-    conn, addr = serv.accept()
+    c, addr = s.accept()
     from_client = ''
+    print('Got connection from', addr)
     while True:
-        data = conn.recv(4096)
+        data = c.recv(4096)
         if not data: break
-        from_client += data
-        print(from_client)
-        conn.send("I am SERVER\n")
-    conn.close()
-    print('client disconnected')
+        from_client = data
+        print(from_client.decode('ascii'))
+        c.send('I am SERVER'.encode())
+    c.close()
+    print("Client disconnected")
