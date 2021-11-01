@@ -3,7 +3,7 @@ import socket
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 host = socket.gethostname()
 #host_ip = socket.gethostbyname(host) #ip of the advice
-host_ip = "169.254.7.163"
+host_ip = "169.254.119.19"
 port = 12345
 
 s.bind((host_ip, port))
