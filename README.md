@@ -1,3 +1,2 @@
 # 180DA-WarmUp
-public repository for UCLA 180DA Fall 2021
-"# testing" 
+My EC ENGR 180DA/DB demos for the first four projects of getting used to systems design.
